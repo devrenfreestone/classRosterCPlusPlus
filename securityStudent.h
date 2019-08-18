@@ -11,7 +11,7 @@ public:
 	SecurityStudent(string studentId, string firstName, string lastName, string emailAddress, int age, int course[], Degree degreeType);
 	~SecurityStudent();
 
-	Degree GetDegreeProgram();
+	Degree GetDegreeType();
 	void Print();
 
 private:

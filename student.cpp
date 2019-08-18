@@ -97,6 +97,6 @@ Student::~Student()
 void Student::Print() {
 
 }
-void Student::GetDegreeProgram() {
+Degree Student::GetDegreeType() {
 
 }

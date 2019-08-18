@@ -18,7 +18,7 @@ SoftwareStudent::~SoftwareStudent()
 {
 	Student::~Student();
 }
-Degree SoftwareStudent::GetDegreeProgram() {
+Degree SoftwareStudent::GetDegreeType() {
 	return SOFTWARE;
 }
 void SoftwareStudent::Print() {

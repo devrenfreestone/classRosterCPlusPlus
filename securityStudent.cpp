@@ -18,7 +18,7 @@ SecurityStudent::~SecurityStudent()
 {
 	Student::~Student();
 }
-Degree SecurityStudent::GetDegreeProgram() {
+Degree SecurityStudent::GetDegreeType() {
 	return SECURITY;
 }
 void SecurityStudent::Print() {

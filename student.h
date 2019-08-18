@@ -41,7 +41,7 @@ class Student
 		//Virtual
 
 		virtual void Print() = 0;
-		virtual Degree GetDegreeProgram() = 0;
+		virtual Degree GetDegreeType() = 0;
 
 	protected:
 		string studentId;
