@@ -18,6 +18,7 @@ class Roster
 		Student** classRosterArray;
 		int lastIndex;
 		int capacity;
+		
 
 		Roster();
 		Roster(int capacity);
@@ -26,11 +27,15 @@ class Roster
 		Student* getStudentAt(int index);
 		void parse(string row);
 		void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, Degree degreeType);
-		void remove(string studentID);
+		bool remove(string studentID);
 		void printAll();
-		void printDaysInCourse(string studentID);
+		void printDaysInCourse(string studentID, int numDaysArray);
 		void printInvalidEmails();
 		void printByDegreeProgram(int degreeProgram);
+
+		int numDaysArray = Student::numDaysArraySize;
+		int numDaysAverage = 0;
+		int numDaysSum = 0;
 
 	private:
 

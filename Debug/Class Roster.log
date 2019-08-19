@@ -1,4 +1,21 @@
-﻿  student.cpp
+﻿  networkStudent.cpp
+C:\Users\Devren Freestone\Desktop\Class Roster\student.h(44,36): error C2535:  'Degree Student::GetDegreeType(void)': member function already defined or declared
+  roster.cpp
+C:\Users\Devren Freestone\Desktop\Class Roster\student.h(34): message :  see declaration of 'Student::GetDegreeType'
+C:\Users\Devren Freestone\Desktop\Class Roster\student.h(44,36): error C2535:  'Degree Student::GetDegreeType(void)': member function already defined or declared
+C:\Users\Devren Freestone\Desktop\Class Roster\student.h(34): message :  see declaration of 'Student::GetDegreeType'
+C:\Users\Devren Freestone\Desktop\Class Roster\roster.cpp(22,18): error C2084:  function 'Roster::Roster(void)' already has a body
+  securityStudent.cpp
+C:\Users\Devren Freestone\Desktop\Class Roster\roster.h(44): message :  see previous definition of '{ctor}'
+C:\Users\Devren Freestone\Desktop\Class Roster\student.h(44,36): error C2535:  'Degree Student::GetDegreeType(void)': member function already defined or declared
+  softwareStudent.cpp
+C:\Users\Devren Freestone\Desktop\Class Roster\student.h(34): message :  see declaration of 'Student::GetDegreeType'
+C:\Users\Devren Freestone\Desktop\Class Roster\student.h(44,36): error C2535:  'Degree Student::GetDegreeType(void)': member function already defined or declared
+  student.cpp
+C:\Users\Devren Freestone\Desktop\Class Roster\student.h(34): message :  see declaration of 'Student::GetDegreeType'
 C:\Users\Devren Freestone\Desktop\Class Roster\student.cpp(1,10): warning C4067:  unexpected tokens following preprocessor directive - expected a newline
-MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\Devren Freestone\Desktop\Class Roster\Debug\Class Roster.exe : fatal error LNK1120: 1 unresolved externals
+C:\Users\Devren Freestone\Desktop\Class Roster\student.h(44,36): error C2535:  'Degree Student::GetDegreeType(void)': member function already defined or declared
+C:\Users\Devren Freestone\Desktop\Class Roster\student.h(34): message :  see declaration of 'Student::GetDegreeType'
+C:\Users\Devren Freestone\Desktop\Class Roster\student.cpp(108,33): error C2084:  function 'Degree Student::GetDegreeType(void)' already has a body
+  Generating Code...
+C:\Users\Devren Freestone\Desktop\Class Roster\student.cpp(69): message :  see previous definition of 'GetDegreeType'

@@ -7,19 +7,19 @@ using namespace std;
 
 NetworkStudent::NetworkStudent():Student()
 {
-	degreeType = NETWORKING;
+	degreeType = NETWORK;
 }
 NetworkStudent::NetworkStudent(string studentId, string firstName, string lastName, string emailAddress, int age, int course[], Degree degreeType) 
 	: Student(studentId, firstName, lastName, emailAddress, age, course)
 {
-	degreeType = NETWORKING;
+	degreeType = NETWORK;
 }
 NetworkStudent::~NetworkStudent()
 {
 	Student::~Student();
 }
-Degree NetworkStudent::GetDegreeProgram() {
-	return NETWORKING;
+Degree NetworkStudent::GetDegreeType() {
+	return NETWORK;
 }
 void NetworkStudent::Print() {
 	this->Student::Print();

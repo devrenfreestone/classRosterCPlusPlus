@@ -1,4 +1,5 @@
 #include <iostream>;
+#include <iomanip>
 #include "student.h"
 using namespace std;
 
@@ -95,7 +96,14 @@ Student::~Student()
 
 //Virtual
 void Student::Print() {
-
+	cout << left << setw(5) << studentId;
+	cout << left << setw(20) << firstName;
+	cout << left << setw(20) << lastName;
+	cout << left << setw(40) << emailAddress;
+	cout << left << setw(2) << age;
+	cout << left << setw(5) << numDaysToCompleteEachCourse[0];
+	cout << left << setw(5) << numDaysToCompleteEachCourse[1];
+	cout << left << setw(5) << numDaysToCompleteEachCourse[2];
 }
 Degree Student::GetDegreeType() {
 

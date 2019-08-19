@@ -1,5 +1,6 @@
 #include <iostream>
 #include "roster.h"
+#include "student.h"
 using namespace std;
 /*
 Create a Roster class (roster.cpp) by doing the following :
@@ -105,7 +106,7 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
 	else cout << "Invalid Degree Type" << endl;
 }
 
-void Roster::remove(string studentID) {
+bool Roster::remove(string studentID) {
 	bool found = false;
 	for (int i = 0; i <= lastIndex; i++) {
 		if (this->classRosterArray[i]->GetStudentId() == studentID) {
@@ -115,12 +116,25 @@ void Roster::remove(string studentID) {
 			lastIndex--;
 		}
 	}
+	return found;
 }
 void Roster::printAll() {
 	for (int i = 0; i <= this->lastIndex; i++) (this->classRosterArray)[i]->Print();
 }
-void Roster::printDaysInCourse(string studentID) {
-
+void Roster::printDaysInCourse(string studentID, int numDaysArray) {
+	bool found = false;
+	for (int i = 0; i <= lastIndex; i++) {
+		if (this->classRosterArray[i]->GetStudentId() == studentID) {
+			found = true;
+			int* days = classRosterArray[i]->GetNumDaysToCompleteEachCourse();
+			for (int i = 0; i <= numDaysArray;) {
+				numDaysSum = numDaysSum + days[i];
+			}
+			numDaysAverage = numDaysSum / numDaysArray;
+			cout << "Student's average number of days in each course is " << numDaysAverage << endl;
+		}
+	}
+	if (!found) cout << "Student not found" << endl;
 }
 void Roster::printInvalidEmails() {
 
