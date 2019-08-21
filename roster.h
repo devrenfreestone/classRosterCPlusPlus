@@ -18,6 +18,7 @@ class Roster
 		Student** classRosterArray;
 		int lastIndex;
 		int capacity;
+		string checkEmail;
 		
 
 		Roster();

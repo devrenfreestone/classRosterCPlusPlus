@@ -1,6 +1,8 @@
 #include <iostream>
+#include <string>
 #include "roster.h"
 #include "student.h"
+
 using namespace std;
 /*
 Create a Roster class (roster.cpp) by doing the following :
@@ -137,7 +139,37 @@ void Roster::printDaysInCourse(string studentID, int numDaysArray) {
 	if (!found) cout << "Student not found" << endl;
 }
 void Roster::printInvalidEmails() {
+	size_t spaceCheck;
+	size_t atCheck;
+	size_t periodCheck;
+	string checkEmail;
+	int emailValidation = 0;
+	cout << "Displaying invalid emails: " << endl;
+	bool any = false;
+	for (int i = 0; i <= numDaysArray; i++)
+	{
+		any = false;
+		checkEmail = classRosterArray[i]->GetEmailAddress();
 
+		spaceCheck = checkEmail.find(' ');
+		atCheck = checkEmail.find('@');
+		periodCheck = checkEmail.find('.');
+
+		if (spaceCheck != string::npos) {
+			emailValidation++;
+		}
+		else if (atCheck == string::npos) {
+			emailValidation++;
+		}
+		else if (periodCheck == string::npos) {
+			emailValidation++;
+		}
+		if (emailValidation != 0) {
+			any = true;
+		}
+		if (any) cout << checkEmail << endl;;
+	}
+	if (!any) cout << "NONE";
 }
 void Roster::printByDegreeProgram(int degreeProgram) {
 
