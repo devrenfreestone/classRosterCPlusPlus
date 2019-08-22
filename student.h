@@ -31,7 +31,6 @@ class Student
 		string GetEmailAddress();
 		int GetAge();
 		int* GetNumDaysToCompleteEachCourse();
-		virtual Degree GetDegreeType() = 0;
 
 		//Constructors and Destructors
 		Student();

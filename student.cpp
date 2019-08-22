@@ -1,4 +1,5 @@
-#include <iostream>;
+#include <iostream>
+#include <string>
 #include <iomanip>
 #include "student.h"
 using namespace std;
@@ -104,7 +105,4 @@ void Student::Print() {
 	cout << left << setw(5) << numDaysToCompleteEachCourse[0];
 	cout << left << setw(5) << numDaysToCompleteEachCourse[1];
 	cout << left << setw(5) << numDaysToCompleteEachCourse[2];
-}
-Degree Student::GetDegreeType() {
-
 }

@@ -3,3 +3,7 @@
 .tlog
 .idb
 .pdb
+.exe
+.ilk
+.sln
+cppHomework1/
