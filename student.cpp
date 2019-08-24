@@ -43,10 +43,6 @@ void Student::SetNumDaysToCompleteEachCourse(int course[]) {
 	}
 	return;
 }
-void Student::SetDegreeType(Degree degreeType) {
-	this->degreeType = degreeType;
-	return;
-}
 
 //Accessors
 string Student::GetStudentId() {
@@ -66,9 +62,6 @@ int Student::GetAge() {
 }
 int* Student::GetNumDaysToCompleteEachCourse() {
 	return numDaysToCompleteEachCourse;
-}
-Degree Student::GetDegreeType() {
-	return degreeType;
 }
 
 //Constructors and Destructor
@@ -93,16 +86,4 @@ Student::Student(string studentId, string firstName, string lastName, string ema
 
 Student::~Student()
 {
-}
-
-//Virtual
-void Student::Print() {
-	cout << left << setw(5) << studentId;
-	cout << left << setw(20) << firstName;
-	cout << left << setw(20) << lastName;
-	cout << left << setw(40) << emailAddress;
-	cout << left << setw(2) << age;
-	cout << left << setw(5) << numDaysToCompleteEachCourse[0];
-	cout << left << setw(5) << numDaysToCompleteEachCourse[1];
-	cout << left << setw(5) << numDaysToCompleteEachCourse[2];
 }

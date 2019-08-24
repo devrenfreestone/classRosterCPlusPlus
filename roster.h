@@ -16,7 +16,6 @@ Create a Roster class (roster.cpp) by doing the following :
 class Roster
 {
 	public:
-		Student** classRosterArray;
 		int lastIndex;
 		int capacity;
 		string checkEmail;
@@ -26,24 +25,20 @@ class Roster
 		Roster(int capacity);
 		~Roster();
 
-		//Student* getStudentAt(int index);
+		Student * GetStudentAt(int index);
 		void parse(string row);
 		void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, Degree degreeType);
 		bool remove(string studentID);
 		void printAll();
-		void printDaysInCourse(string studentID, int numDaysArray);
+		void printDaysInCourse(string studentID);
 		void printInvalidEmails();
-		void printByDegreeProgram(int degreeProgram);
+		void printByDegreeProgram(Degree d);
 
 		int numDaysArray = Student::numDaysArraySize;
 		int numDaysAverage = 0;
 		int numDaysSum = 0;
 
 	private:
-
+		Student** classRosterArray;
 };
-
-Roster::~Roster()
-{
-}
 #endif

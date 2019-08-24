@@ -22,7 +22,6 @@ class Student
 		void SetEmailAddress(string emailAddress);
 		void SetAge(int age);
 		void SetNumDaysToCompleteEachCourse(int course[]);
-		void SetDegreeType(Degree degreeType);
 
 		//Accessors
 		string GetStudentId();
@@ -42,14 +41,13 @@ class Student
 		virtual void Print() = 0;
 		virtual Degree GetDegreeType() = 0;
 
-	protected:
+	private:
 		string studentId;
 		string firstName;
 		string lastName;
 		string emailAddress;
 		int age = 0;
 		int numDaysToCompleteEachCourse[numDaysArraySize];
-		Degree degreeType;
 };
 
 

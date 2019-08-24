@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "networkStudent.h"
 #include "student.h"
 using namespace std;
@@ -9,10 +10,10 @@ NetworkStudent::NetworkStudent():Student()
 {
 	degreeType = NETWORK;
 }
-NetworkStudent::NetworkStudent(string studentId, string firstName, string lastName, string emailAddress, int age, int course[], Degree degreeType) 
+NetworkStudent::NetworkStudent(string studentId, string firstName, string lastName, string emailAddress, int age, int course[], Degree d) 
 	: Student(studentId, firstName, lastName, emailAddress, age, course)
 {
-	degreeType = NETWORK;
+	degreeType = d;
 }
 NetworkStudent::~NetworkStudent()
 {
@@ -22,6 +23,13 @@ Degree NetworkStudent::GetDegreeType() {
 	return NETWORK;
 }
 void NetworkStudent::Print() {
-	this->Student::Print();
-	cout << "NETWORKING" << endl;
+	cout << GetStudentId() << '\t';
+	cout << "First Name: " << GetFirstName() << '\t';
+	cout << "Last Name: " << GetLastName() << '\t';
+	cout << "Email Address: " << GetEmailAddress() << '\t';
+	cout << "Age: " << GetAge() << '\t';
+	cout << GetNumDaysToCompleteEachCourse()[0] << '\t';
+	cout << GetNumDaysToCompleteEachCourse()[1] << '\t';
+	cout << GetNumDaysToCompleteEachCourse()[2] << '\t';
+	cout << "Degree Program: " << "NETWORK" << endl;
 }

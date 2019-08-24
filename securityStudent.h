@@ -15,7 +15,7 @@ public:
 	void Print();
 
 private:
-
+	Degree degreeType;
 };
 
 
