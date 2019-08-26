@@ -31,5 +31,5 @@ void SoftwareStudent::Print() {
 	cout << GetNumDaysToCompleteEachCourse()[0] << '\t';
 	cout << GetNumDaysToCompleteEachCourse()[1] << '\t';
 	cout << GetNumDaysToCompleteEachCourse()[2] << '\t';
-	cout << "Degree Program: " << "SOFTWARE" << endl;
+	cout << "Degree Program: " << degreeTypeStrings[GetDegreeType()] << endl;
 }

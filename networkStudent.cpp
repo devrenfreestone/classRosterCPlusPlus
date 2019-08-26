@@ -13,14 +13,17 @@ NetworkStudent::NetworkStudent():Student()
 NetworkStudent::NetworkStudent(string studentId, string firstName, string lastName, string emailAddress, int age, int course[], Degree d) 
 	: Student(studentId, firstName, lastName, emailAddress, age, course)
 {
-	degreeType = d;
+	degreeType = NETWORK;
 }
 NetworkStudent::~NetworkStudent()
 {
 	Student::~Student();
 }
 Degree NetworkStudent::GetDegreeType() {
-	return NETWORK;
+	string degreeTypeString;
+	degreeTypeString = degreeTypeStrings[degreeType];
+	//cout << degreeTypeString;
+	return degreeType;
 }
 void NetworkStudent::Print() {
 	cout << GetStudentId() << '\t';
@@ -31,5 +34,5 @@ void NetworkStudent::Print() {
 	cout << GetNumDaysToCompleteEachCourse()[0] << '\t';
 	cout << GetNumDaysToCompleteEachCourse()[1] << '\t';
 	cout << GetNumDaysToCompleteEachCourse()[2] << '\t';
-	cout << "Degree Program: " << "NETWORK" << endl;
+	cout << "Degree Program: " << degreeTypeStrings[GetDegreeType()] << endl;
 }

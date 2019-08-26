@@ -20,7 +20,7 @@ SecurityStudent::~SecurityStudent()
 	Student::~Student();
 }
 Degree SecurityStudent::GetDegreeType() {
-	return SECURITY;
+	return degreeType;
 }
 void SecurityStudent::Print() {
 	cout << GetStudentId() << '\t';
@@ -31,5 +31,5 @@ void SecurityStudent::Print() {
 	cout << GetNumDaysToCompleteEachCourse()[0] << '\t';
 	cout << GetNumDaysToCompleteEachCourse()[1] << '\t';
 	cout << GetNumDaysToCompleteEachCourse()[2] << '\t';
-	cout << "Degree Program: " << "SECURITY" << endl;
+	cout << "Degree Program: " << degreeTypeStrings[GetDegreeType()] << endl;
 }

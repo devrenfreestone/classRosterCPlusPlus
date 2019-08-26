@@ -111,7 +111,7 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
 	else cout << "Invalid Degree Type" << endl;
 }
 
-bool Roster::remove(string studentID) {
+void Roster::remove(string studentID) {
 	bool found = false;
 	for (int i = 0; i <= lastIndex; i++) {
 		if (this->classRosterArray[i]->GetStudentId() == studentID) {
@@ -121,7 +121,7 @@ bool Roster::remove(string studentID) {
 			lastIndex--;
 		}
 	}
-	return found;
+	if (!found) cout << "Student not found" << endl;
 }
 void Roster::printAll() {
 	for (int i = 0; i <= this->lastIndex; i++) (this->classRosterArray)[i]->Print();
@@ -223,17 +223,11 @@ int main() {
 	roster->printByDegreeProgram(SOFTWARE);
 	cout << endl;
 	cout << "Removing A3, then printing all students to show A3 was removed" << endl;
-	if (roster->remove("A3")) {
-		roster->printAll();
-	}
-	else cout << "Student not found" << endl;
+	roster->remove("A3");
+	roster->printAll();
 	cout << endl;
 	cout << "Attempting to remove A3 again..." << endl;
-	if (roster->remove("A3")) {
-		roster->printAll();
-	}
-	else cout << "Student not found" << endl;
-
+	roster->remove("A3");
 	roster->~Roster();
 	return 0;
 }
