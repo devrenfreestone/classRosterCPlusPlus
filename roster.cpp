@@ -224,7 +224,7 @@ int main() {
 	cout << endl;
 	cout << "Removing A3, then printing all students to show A3 was removed" << endl;
 	roster->remove("A3");
-	roster->printAll();
+	//roster->printAll();
 	cout << endl;
 	cout << "Attempting to remove A3 again..." << endl;
 	roster->remove("A3");
